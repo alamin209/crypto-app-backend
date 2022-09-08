@@ -6,7 +6,7 @@ import { UsersService } from './users.service';
 export class UsersController {
   constructor(private readonly usersService: UsersService) {}
 
-  async createUser(
-    @Body() createUserRequest: CreateUserRequest,
-  ): Promise<any> {}
+  async createUser(@Body() createUserRequest: CreateUserRequest): Promise<any> {
+    return this.usersService.createUser(createUserRequest);
+  }
 }
